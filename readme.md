@@ -1,4 +1,12 @@
-Olá, este é um projeto maiorzinho... 
+Olá, para hobbie, vou criar um projetinho pequeno, um clone da Netflix
 
-vou recriar em react a famosa netflix, bora ver se da bom!
+Para a API será usado:
+https://www.themoviedb.org
 
+Para visualizar melhor os projetos:
+http://jsonviewer.stack.hu/
+
+Para testar nossos requests:
+https://resttesttest.com/
+
+Diretos da imagem reservados para Netflix.
