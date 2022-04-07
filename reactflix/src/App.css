@@ -8,8 +8,32 @@ body {
     color: white;
     margin: none;
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 .lists{
     margin-top: -150px;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+}
+
+.linksRede a {
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+}
+
+.linksRede {
+    margin-top: 20px;
+}
+
+

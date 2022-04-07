@@ -10,6 +10,10 @@ export default () => {
 /*padrão comum para salvar o state*/
   const [movieList, setMovieList] = useState([])
   const [featuredData, setfeaturedData] = useState(null)
+  const [blackHeader, setBlackHeader] = useState(false)
+
+
+  
   useEffect(()=>{
 
     
@@ -31,13 +35,30 @@ export default () => {
     loadAll();
   }, []);
 
+  useEffect(()=> {
+    const scrollListener = () => {
+      if(window.scrollY > 40) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false)
+      }
+    }
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+    }
+
+
+  })
+
 
 
 
   return (
     <div className="page">
 
-      <Header />
+      <Header black={blackHeader} />
 
       {featuredData && 
         <FeaturedMovie item={featuredData} />
@@ -50,6 +71,16 @@ export default () => {
 
         ))}
       </section>
+      <footer>
+        Feito por José Guilherme Neto para um trabalho da Faculdade! <br></br>
+        Todos os direitos de imagem reservados para Netflix
+        <div className='linksRede'>
+
+        API usada <a href='https://www.themoviedb.org'>https://www.themoviedb.org</a><br></br>
+        link do <a href='https://github.com/joseguilhermee'>GitHub</a><br></br>
+        link do <a href='https://www.linkedin.com/in/jose-guilherme-neto/'>Linkedin</a>
+        </div>
+      </footer>
     </div>
   )
 }
