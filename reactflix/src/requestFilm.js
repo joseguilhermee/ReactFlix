@@ -37,15 +37,31 @@ export default {
                 itens: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
+                slug: 'comedia',
+                title: 'Filmes de Comédia',
+                itens: await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
+            },
+            {
+                slug: 'horror',
+                title: 'Filmes de Terror',
+                itens: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
+            },
+            {
                 slug: 'recomendados',
-                title: 'Recomendados da semanda!',
+                title: 'Recomendados para você!',
                 itens: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'populares',
-                title: 'Populares',
-                itens: await basicFetch(`/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+                slug: 'chato',
+                title: 'Para morrer de tédio',
+                itens: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
             },
+            {
+                slug: 'doc',
+                title: 'Documentarios',
+                itens: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
+            },
+
         ];
     },
     getMovieInfo: async(movieId, type) => {

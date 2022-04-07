@@ -11,9 +11,11 @@ export default ({item}) => {
     for(let i in item.genres) {
         genres.push(item.genres[i].name)
     }
+    let descr = item.overview;
+    if (descr.length > 200) {
+        descr = descr.substring(0, 200)+'...'
+    }
     return (
-
-
 
         <section className="featured" style={{
             backgroundSize: 'cover',
@@ -28,7 +30,7 @@ export default ({item}) => {
                         <div className="featured--year">{fristDate.getFullYear()}</div>
                         <div className="featured--temp">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
                     </div>
-                    <div className="featured--desc">{item.overview}</div>
+                    <div className="featured--desc">{descr}</div>
                     <div className="featured--buttons">
 
 

@@ -5,6 +5,9 @@ import Tmdb from './requestFilm';
 import MovieRow from './components/movieRow'
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+
+
+
  
 export default () => {
 /*padrão comum para salvar o state*/
@@ -32,8 +35,12 @@ export default () => {
       console.log(chosenInfo)
     }
 
+
+
     loadAll();
   }, []);
+
+
 
   useEffect(()=> {
     const scrollListener = () => {
@@ -51,6 +58,8 @@ export default () => {
 
 
   })
+
+
 
 
 
@@ -81,6 +90,14 @@ export default () => {
         link do <a href='https://www.linkedin.com/in/jose-guilherme-neto/'>Linkedin</a>
         </div>
       </footer>
+
+
+
+      {movieList.length <= 0 &&
+      <div className='loading'>
+        <img src="https://c.tenor.com/Rfyx9OkRI38AAAAC/netflix-netflix-startup.gif" alt="carregando"></img>
+      </div>
+      }
     </div>
   )
 }

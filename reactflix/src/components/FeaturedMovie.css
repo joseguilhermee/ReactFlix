@@ -86,3 +86,26 @@
     color: #999;
 }
 
+@media (max-width:760px) {
+    .featured--name {
+        font-size: 30px;
+    }
+    .featured {
+        height: 90vh;
+    }
+    .featured--info {
+        font-size: 16px;
+    }
+    .featured--desc{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .featured--Assistir, .featured--Add{
+        font-size: 16px;
+    }
+    .featured--genres{
+        font-size: 14px;
+    }
+}
+
