@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /* Aqui será para todos os tipos de request envolvendo os Filmes */
 
 

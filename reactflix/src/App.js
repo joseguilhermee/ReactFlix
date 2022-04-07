@@ -4,6 +4,7 @@ import './App.css'
 import Tmdb from './requestFilm';
 import MovieRow from './components/movieRow'
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
  
 export default () => {
 /*padrão comum para salvar o state*/
@@ -24,6 +25,7 @@ export default () => {
       // await fará uma requisição, então espere o resultado
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv')
       setfeaturedData(chosenInfo)
+      console.log(chosenInfo)
     }
 
     loadAll();
@@ -34,6 +36,8 @@ export default () => {
 
   return (
     <div className="page">
+
+      <Header />
 
       {featuredData && 
         <FeaturedMovie item={featuredData} />
